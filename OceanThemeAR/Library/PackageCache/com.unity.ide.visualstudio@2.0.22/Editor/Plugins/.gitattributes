@@ -1,3 +1,12 @@
 AppleEventIntegration.bundle/Contents/MacOS/AppleEventIntegration binary
 # Automatically convert CRLF to LF on commit, and LF to CRLF on checkout (recommended on Windows)
 git config --global core.autocrlf true
+# Convert to LF (Unix style)
+find . -type f -exec dos2unix {} \;
+
+# Or convert to CRLF (Windows style)
+find . -type f -exec unix2dos {} \;
+* text=auto
+*.cs text eol=crlf
+*.sh text eol=lf
+*.meta text eol=lf
