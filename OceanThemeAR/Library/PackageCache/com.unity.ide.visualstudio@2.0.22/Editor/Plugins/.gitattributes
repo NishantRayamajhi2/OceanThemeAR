@@ -1,1 +1,3 @@
 AppleEventIntegration.bundle/Contents/MacOS/AppleEventIntegration binary
+# Automatically convert CRLF to LF on commit, and LF to CRLF on checkout (recommended on Windows)
+git config --global core.autocrlf true
